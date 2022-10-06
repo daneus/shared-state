@@ -2,7 +2,7 @@
   <div
     class="wrapper"
     :style="{
-      backgroundColor: `${$darkModeEnabled ? 'black' : 'white'}`,
+      backgroundColor: `${$darkModeEnabled ? '#111' : '#DDD'}`,
       transition: 'all .3s linear',
     }"
   >

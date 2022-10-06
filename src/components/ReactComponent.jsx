@@ -15,28 +15,50 @@ export default function ReactComponent() {
         <button
           className='change-theme'
           onClick={() => darkModeEnabled.set(!$darkModeEnabled)}
+          style={{
+            backgroundColor: `${$darkModeEnabled ? '#F0F0F0' : '#BFBFBF'}`,
+            transition: 'all .3s linear',
+          }}
         >
           Change theme
         </button>
       </div>
       <div
-        className='react-component-wrapper'
+        className='react-component-wrapper component-wrapper'
         style={{
-          backgroundColor: `${$darkModeEnabled ? 'black' : 'white'}`,
+          backgroundColor: `${$darkModeEnabled ? '#111' : '#DDD'}`,
           transition: 'all .3s linear',
+          border: '3px solid #ff0',
+          boxShadow: `0 0 16px 0 ${
+            $darkModeEnabled ? '#FF0' : '#FED000'
+          }, inset 0 0 16px 0 ${$darkModeEnabled ? '#FF0' : '#fed000'}`,
         }}
       >
         <h1
           className='react-component'
-          style={{ color: `${$darkModeEnabled ? 'white' : 'black'}` }}
+          style={{
+            color: `${$darkModeEnabled ? '#FFFF00' : '#FEED00'}`,
+          }}
         >
           This is a React JavaScript Component
         </h1>
         <div className='buttons-wrapper'>
-          <button onClick={() => setCounter((prev) => prev + 1)}>
+          <button
+            onClick={() => setCounter((prev) => prev + 1)}
+            style={{
+              backgroundColor: `${$darkModeEnabled ? '#F0F0F0' : '#BFBFBF'}`,
+              transition: 'all .3s linear',
+            }}
+          >
             Component counter: {counter}
           </button>
-          <button onClick={() => globalCounter.set($globalCounter + 1)}>
+          <button
+            onClick={() => globalCounter.set($globalCounter + 1)}
+            style={{
+              backgroundColor: `${$darkModeEnabled ? '#F0F0F0' : '#BFBFBF'}`,
+              transition: 'all .3s linear',
+            }}
+          >
             Global counter: {$globalCounter}
           </button>
         </div>

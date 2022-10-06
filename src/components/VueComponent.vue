@@ -1,20 +1,31 @@
 <template>
   <div
-    class="vue-component-wrapper"
+    class="vue-component-wrapper component-wrapper"
     :style="{
-      backgroundColor: `${$darkModeEnabled ? 'black' : 'white'}`,
+      backgroundColor: `${$darkModeEnabled ? '#111' : '#ddd'}`,
       transition: 'all .3s linear',
     }"
   >
-    <h1
-      class="vue-component"
-      :style="{ color: `${$darkModeEnabled ? 'white' : 'black'}` }"
-    >
+    <h1 class="vue-component" :style="{ color: '#41b883' }">
       This is a Vue Component
     </h1>
     <div class="buttons-wrapper">
-      <button @click="increment">Component counter: {{ counter }}</button>
-      <button @click="globalCounter.set($globalCounter + 1)">
+      <button
+        @click="increment"
+        :style="{
+          backgroundColor: `${$darkModeEnabled ? '#F0F0F0' : '#BFBFBF'}`,
+          transition: 'all .3s linear',
+        }"
+      >
+        Component counter: {{ counter }}
+      </button>
+      <button
+        @click="globalCounter.set($globalCounter + 1)"
+        :style="{
+          backgroundColor: `${$darkModeEnabled ? '#F0F0F0' : '#BFBFBF'}`,
+          transition: 'all .3s linear',
+        }"
+      >
         Global counter: {{ $globalCounter }}
       </button>
     </div>
@@ -52,7 +63,8 @@ const $darkModeEnabled = useStore(darkModeEnabled);
   font-size: clamp(1.8rem, 4vmin, 6rem);
 }
 .vue-component-wrapper {
-  border: 1px solid green;
+  border: 3px solid #41b883;
+  box-shadow: 0 0 16px 0px #41b883, inset 0 0 16px 0px #41b883;
 }
 .buttons-wrapper {
   display: flex;

@@ -5,20 +5,26 @@
 </script>
 
 <div
-  class="svelte-component-wrapper"
+  class="svelte-component-wrapper component-wrapper"
   style="background-color:{`${
-    $darkModeEnabled ? 'black' : 'white'
+    $darkModeEnabled ? '#111' : '#ddd'
   }`}; transition:all .3s linear;"
 >
-  <h1
-    class="svelte-component"
-    style="color:{`${$darkModeEnabled ? 'white' : 'black'}`}"
-  >
+  <h1 class="svelte-component" style="color: #ff3e00">
     This is a Svelte Component
   </h1>
   <div class="buttons-wrapper">
-    <button on:click={() => counter++}>Component counter: {counter}</button>
-    <button on:click={() => globalCounter.set($globalCounter + 1)}
+    <button
+      on:click={() => counter++}
+      style="
+          background-color: {`${$darkModeEnabled ? '#F0F0F0' : '#BFBFBF'}`};
+          transition:all .3s linear;">Component counter: {counter}</button
+    >
+    <button
+      on:click={() => globalCounter.set($globalCounter + 1)}
+      style="
+          background-color: {`${$darkModeEnabled ? '#F0F0F0' : '#BFBFBF'}`};
+          transition:all .3s linear;"
       >Global counter: {$globalCounter}
     </button>
   </div>
@@ -29,7 +35,8 @@
     font-size: clamp(1.8rem, 4vmin, 6rem);
   }
   .svelte-component-wrapper {
-    border: 1px solid violet;
+    border: 3px solid #ff3e00;
+    box-shadow: 0 0 16px 0px #ff3e00, inset 0 0 16px 0px #ff3e00;
   }
   .buttons-wrapper {
     display: flex;
