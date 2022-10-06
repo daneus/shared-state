@@ -12,23 +12,34 @@ export default function ReactComponent() {
   return (
     <>
       <div>
-        <button onClick={() => darkModeEnabled.set(!$darkModeEnabled)}>
+        <button
+          className='change-theme'
+          onClick={() => darkModeEnabled.set(!$darkModeEnabled)}
+        >
           Change theme
         </button>
       </div>
-      <button onClick={() => setCounter((prev) => prev + 1)}>{counter}</button>
-      <button onClick={() => globalCounter.set($globalCounter + 1)}>
-        Global counter {$globalCounter}
-      </button>
       <div
+        className='react-component-wrapper'
         style={{
           backgroundColor: `${$darkModeEnabled ? 'black' : 'white'}`,
-          transition: 'all .5s linear',
+          transition: 'all .3s linear',
         }}
       >
-        <h1 style={{ color: `${$darkModeEnabled ? 'white' : 'black'}` }}>
+        <h1
+          className='react-component'
+          style={{ color: `${$darkModeEnabled ? 'white' : 'black'}` }}
+        >
           This is a React JavaScript Component
         </h1>
+        <div className='buttons-wrapper'>
+          <button onClick={() => setCounter((prev) => prev + 1)}>
+            Component counter: {counter}
+          </button>
+          <button onClick={() => globalCounter.set($globalCounter + 1)}>
+            Global counter: {$globalCounter}
+          </button>
+        </div>
       </div>
     </>
   );

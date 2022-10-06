@@ -1,9 +1,9 @@
 <template>
   <div
-    className="wrapper"
+    class="wrapper"
     :style="{
       backgroundColor: `${$darkModeEnabled ? 'black' : 'white'}`,
-      transition: 'all .5s linear',
+      transition: 'all .3s linear',
     }"
   >
     <slot></slot>

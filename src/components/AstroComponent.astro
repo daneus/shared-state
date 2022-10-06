@@ -5,7 +5,21 @@ import SvelteComponent from './SvelteComponent.svelte';
 import VueComponent from './VueComponent.vue';
 ---
 
-<ReactComponent client:load />
-<ReactTypeScriptComponent client:load />
-<VueComponent client:load />
-<SvelteComponent client:load />
+<div class='content-container'>
+  <ReactComponent client:load />
+  <ReactTypeScriptComponent client:load />
+  <VueComponent client:load />
+  <SvelteComponent client:load />
+</div>
+
+<style>
+  .content-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+  }
+</style>
