@@ -2,7 +2,7 @@
   <div
     class="vue-component-wrapper component-wrapper"
     :style="{
-      backgroundColor: `${$darkModeEnabled ? '#111' : '#ddd'}`,
+      backgroundColor: `${$darkModeEnabled ? '#111111' : '#dddddd'}`,
       transition: 'all .3s linear',
     }"
   >
@@ -60,7 +60,7 @@ const $darkModeEnabled = useStore(darkModeEnabled);
 
 <style>
 .vue-component {
-  font-size: clamp(1.8rem, 4vmin, 6rem);
+  font-size: clamp(1.4rem, 4vmin, 6rem);
 }
 .vue-component-wrapper {
   border: 3px solid #41b883;

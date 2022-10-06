@@ -35,9 +35,9 @@ body {
 }
 
 :root {
-  --big-font: clamp(1.8rem, 4vmin, 6rem);
-  --medium-font: clamp(1.3rem, 2.8vmin, 4rem);
-  --small-font: clamp(0.8rem, 1.8vmin, 2rem);
+  --big-font: clamp(1.4rem, 4vmin, 6rem);
+  --medium-font: clamp(1rem, 2.8vmin, 4rem);
+  --small-font: clamp(0.7rem, 1.8vmin, 2rem);
 }
 
 .change-theme {
@@ -80,4 +80,6 @@ button:focus {
 .component-wrapper {
   padding: 1.2rem 2rem;
   border-radius: 1rem;
+  margin: 0 2rem;
+  text-align: center;
 }

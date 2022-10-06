@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { globalCounter } from '../store';
 import { darkModeEnabled } from '../store';
 import '../styles/styles.css';
@@ -37,7 +37,7 @@ export default function ReactComponent() {
         <h1
           className='react-component'
           style={{
-            color: `${$darkModeEnabled ? '#FFFF00' : '#FEED00'}`,
+            color: `${$darkModeEnabled ? '#FF0' : '#FEED00'}`,
           }}
         >
           This is a React JavaScript Component

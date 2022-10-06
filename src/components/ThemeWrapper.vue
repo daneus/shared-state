@@ -2,7 +2,7 @@
   <div
     class="wrapper"
     :style="{
-      backgroundColor: `${$darkModeEnabled ? '#111' : '#DDD'}`,
+      backgroundColor: `${$darkModeEnabled ? '#111111' : '#DDDDDD'}`,
       transition: 'all .3s linear',
     }"
   >
@@ -26,9 +26,9 @@ const $darkModeEnabled = useStore(darkModeEnabled);
 
 <style scoped>
 .wrapper {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   margin: 0;
-  padding: 0;
+  padding: 2.5rem 0;
 }
 </style>

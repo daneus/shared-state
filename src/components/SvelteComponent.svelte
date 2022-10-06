@@ -32,7 +32,7 @@
 
 <style>
   .svelte-component {
-    font-size: clamp(1.8rem, 4vmin, 6rem);
+    font-size: clamp(1.4rem, 4vmin, 6rem);
   }
   .svelte-component-wrapper {
     border: 3px solid #ff3e00;
