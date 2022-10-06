@@ -59,6 +59,22 @@ const $darkModeEnabled = useStore(darkModeEnabled);
 </script>
 
 <style>
+h1 {
+  margin-bottom: 1.4rem;
+  font-weight: 700;
+  user-select: none;
+  -webkit-text-stroke: 1.1px #111;
+}
+button {
+  font-size: clamp(0.7rem, 1.8vmin, 2rem);
+  user-select: none;
+  padding: 0.3rem 1.3rem;
+  border-radius: 0.5em;
+  border: none;
+}
+button:focus {
+  outline: none;
+}
 .vue-component {
   font-size: clamp(1.4rem, 4vmin, 6rem);
 }

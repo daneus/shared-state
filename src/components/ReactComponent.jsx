@@ -11,18 +11,16 @@ export default function ReactComponent() {
 
   return (
     <>
-      <div>
-        <button
-          className='change-theme'
-          onClick={() => darkModeEnabled.set(!$darkModeEnabled)}
-          style={{
-            backgroundColor: `${$darkModeEnabled ? '#F0F0F0' : '#BFBFBF'}`,
-            transition: 'all .3s linear',
-          }}
-        >
-          Change theme
-        </button>
-      </div>
+      <button
+        className='change-theme'
+        onClick={() => darkModeEnabled.set(!$darkModeEnabled)}
+        style={{
+          backgroundColor: `${$darkModeEnabled ? '#F0F0F0' : '#BFBFBF'}`,
+          transition: 'all .3s linear',
+        }}
+      >
+        Change theme
+      </button>
       <div
         className='react-component-wrapper component-wrapper'
         style={{
