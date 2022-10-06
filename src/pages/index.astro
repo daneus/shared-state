@@ -1,0 +1,13 @@
+---
+import AstroComponent from '../components/AstroComponent.astro';
+import Layout from '../layouts/Layout.astro';
+import ThemeWrapper from '../components/ThemeWrapper.vue';
+---
+
+<Layout>
+  <ThemeWrapper client:load>
+    <AstroComponent />
+  </ThemeWrapper>
+</Layout>
+
+<style></style>
